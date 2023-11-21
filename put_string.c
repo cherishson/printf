@@ -9,14 +9,13 @@
 
 int put_string(char *str)
 {
-	int index = 0;
+	int count = 0;
 
-	if (str)
+	while (*str != '\0')
 	{
-		for (; str[index] != '\0'; index++)
-		{
-			_putchar(str[index]);
-		}
+		_putchar((int)*str);
+		count++;
+		str++;
 	}
-	return (index);
+	return (count);
 }
